@@ -17,16 +17,12 @@ struct SplashScreenView: View {
             Color("background")
                 .ignoresSafeArea()
             if isActive == true {
-                FirstView()
+                WelcomeScreen()
             } else {
                 VStack {
                     VStack {
                         Image("Final Proposed Logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        Text("REEL TALK")
-                            .font(.custom("Avenir Next", size: 27))
-                            .foregroundColor(Color.white)
+                        Image("Title")
                     }
                     .scaleEffect(size)
                     .opacity(opacity)
@@ -36,7 +32,7 @@ struct SplashScreenView: View {
                             self.opacity = 1.0
                         }
                     }
-                    .frame(width: 200, height: 200)
+                    
                     .padding()
                 }
                 .onAppear {

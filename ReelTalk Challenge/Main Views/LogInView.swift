@@ -1,5 +1,5 @@
 //
-//  FirstView.swift
+//  LogInView.swift
 //  ReelTalk Challenge
 //
 //  Created by Kaleb Page on 12/18/23.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct FirstView: View {
+struct LogInView: View {
     var body: some View {
-        Text("This is a test")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    FirstView()
+    LogInView()
 }
