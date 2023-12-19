@@ -11,7 +11,7 @@ import SwiftUI
 struct ReelTalk_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }
