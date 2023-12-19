@@ -17,7 +17,7 @@ struct SplashScreenView: View {
             Color("background")
                 .ignoresSafeArea()
             if isActive == true {
-                WelcomeScreen(image: "welcome1")
+                WelcomeView()
             } else {
                 VStack {
                     VStack {

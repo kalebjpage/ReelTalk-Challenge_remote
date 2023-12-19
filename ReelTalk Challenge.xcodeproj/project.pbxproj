@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC262B31225600D7D1EB /* LogInView.swift */; };
 		1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */; };
+		1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */; };
 		1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */; };
 		1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */; };
 		1ED4BBA92B30FF36009CD2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA82B30FF36009CD2C0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1EADCC262B31225600D7D1EB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1ED4BBA12B30FF33009CD2C0 /* ReelTalk Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReelTalk Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelTalk_ChallengeApp.swift; sourceTree = "<group>"; };
 		1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 				1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */,
 				1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */,
 				1ED4BBB22B3109D4009CD2C0 /* WelcomeScreen.swift */,
+				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
 				1EADCC262B31225600D7D1EB /* LogInView.swift */,
 			);
 			path = "Main Views";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */,
+				1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */,
 				1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */,
 				1ED4BBB32B3109D4009CD2C0 /* WelcomeScreen.swift in Sources */,
 				1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */,
