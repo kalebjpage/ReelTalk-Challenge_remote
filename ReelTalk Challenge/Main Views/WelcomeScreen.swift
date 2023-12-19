@@ -9,36 +9,38 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     @State private var logInPressed = false
+    let image: String
     
     var body: some View {
         if logInPressed == false {
             
             VStack(alignment: .center) {
-                Image("welcome1")
+                Spacer()
+                Image(image)
                     .padding()
-                Image("welcomeText1")
-                Text("Welcome to Reel Talk, a community designed for true film and TV Show Fans")
+                Subtitle(text: "Welcome to Reel Talk, a community designed for true film and TV Show Fans")
                     .font(.custom("Avenir Next", size: 17))
                     .multilineTextAlignment(.center)
                     .padding()
-                HStack {
-                    Text("Already have an account?")
-                    
+                Spacer()
+                HStack(alignment: .center) {
+                    Subtitle(text: "Already have an account?")
+                        .bold()
                     Button(action: {
                         logInPressed = true
                     }, label: {
                         Text("Log in")
                             .foregroundColor(Color(red: 0.992, green: 0.656, blue: 0.142))
-                            
                     })
                 }
+                Spacer()
             }
         } else {
-            
+            LogInView()
         }
     }
 }
 
 #Preview {
-    WelcomeScreen()
+    WelcomeScreen(image: "welcome1")
 }

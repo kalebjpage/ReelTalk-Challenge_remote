@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct Subtitle: View {
+    
+    var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
             .font(.custom("Avenir Next", size: 17))
+            .foregroundColor(Color.white)
     }
 }
 
 #Preview {
-    Subtitle()
+    Subtitle(text: "Hello World!")
 }

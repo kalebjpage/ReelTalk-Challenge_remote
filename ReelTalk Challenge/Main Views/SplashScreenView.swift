@@ -17,7 +17,7 @@ struct SplashScreenView: View {
             Color("background")
                 .ignoresSafeArea()
             if isActive == true {
-                WelcomeScreen()
+                WelcomeScreen(image: "welcome1")
             } else {
                 VStack {
                     VStack {
@@ -32,11 +32,10 @@ struct SplashScreenView: View {
                             self.opacity = 1.0
                         }
                     }
-                    
                     .padding()
                 }
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         withAnimation {
                             self.isActive = true
                         }
