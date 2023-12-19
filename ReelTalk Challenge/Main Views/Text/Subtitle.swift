@@ -1,23 +1,17 @@
-//
-//  SystemText.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/18/23.
-//
-
 import SwiftUI
 
 struct Subtitle: View {
     
     var text: String
+    var color: Color
     
     var body: some View {
         Text(text)
             .font(.custom("Avenir Next", size: 17))
-            .foregroundColor(Color.white)
+            .foregroundColor(color)
     }
 }
 
 #Preview {
-    Subtitle(text: "Hello World!")
+    Subtitle(text: "Hello World!", color: .black)
 }

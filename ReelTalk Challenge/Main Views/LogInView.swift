@@ -1,10 +1,3 @@
-//
-//  LogInView.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/18/23.
-//
-
 import SwiftUI
 
 struct LogInView: View {

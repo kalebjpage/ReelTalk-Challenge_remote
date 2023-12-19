@@ -10,6 +10,8 @@
 		1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC262B31225600D7D1EB /* LogInView.swift */; };
 		1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */; };
 		1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */; };
+		1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */; };
+		1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC332B322AD800D7D1EB /* CustomTint.swift */; };
 		1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */; };
 		1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */; };
 		1ED4BBA92B30FF36009CD2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA82B30FF36009CD2C0 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		1EADCC262B31225600D7D1EB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		1EADCC332B322AD800D7D1EB /* CustomTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTint.swift; sourceTree = "<group>"; };
 		1ED4BBA12B30FF33009CD2C0 /* ReelTalk Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReelTalk Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelTalk_ChallengeApp.swift; sourceTree = "<group>"; };
 		1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 				1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */,
 				1ED4BBB22B3109D4009CD2C0 /* WelcomeScreen.swift */,
 				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
+				1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */,
 				1EADCC262B31225600D7D1EB /* LogInView.swift */,
 			);
 			path = "Main Views";
@@ -59,6 +64,14 @@
 				1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		1EADCC322B322AC700D7D1EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EADCC332B322AD800D7D1EB /* CustomTint.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1ED4BB982B30FF33009CD2C0 = {
@@ -80,6 +93,7 @@
 		1ED4BBA32B30FF33009CD2C0 /* ReelTalk Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				1EADCC322B322AC700D7D1EB /* Extensions */,
 				1EADCC282B31235A00D7D1EB /* Main Views */,
 				1ED4BBA82B30FF36009CD2C0 /* Assets.xcassets */,
 				1ED4BBAA2B30FF36009CD2C0 /* Preview Content */,
@@ -166,10 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */,
+				1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */,
 				1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */,
 				1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */,
 				1ED4BBB32B3109D4009CD2C0 /* WelcomeScreen.swift in Sources */,
 				1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */,
+				1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */,
 				1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
