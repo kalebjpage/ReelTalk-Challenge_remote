@@ -10,8 +10,10 @@
 		1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC262B31225600D7D1EB /* LogInView.swift */; };
 		1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */; };
 		1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */; };
-		1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */; };
+		1EADCC2F2B32104000D7D1EB /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */; };
 		1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC332B322AD800D7D1EB /* CustomTint.swift */; };
+		1EADCC362B324A3400D7D1EB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC352B324A3400D7D1EB /* SignUpView.swift */; };
+		1EADCC382B32689700D7D1EB /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC372B32689700D7D1EB /* EmailTextField.swift */; };
 		1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */; };
 		1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */; };
 		1ED4BBA92B30FF36009CD2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA82B30FF36009CD2C0 /* Assets.xcassets */; };
@@ -23,8 +25,10 @@
 		1EADCC262B31225600D7D1EB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		1EADCC332B322AD800D7D1EB /* CustomTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTint.swift; sourceTree = "<group>"; };
+		1EADCC352B324A3400D7D1EB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1EADCC372B32689700D7D1EB /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		1ED4BBA12B30FF33009CD2C0 /* ReelTalk Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReelTalk Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelTalk_ChallengeApp.swift; sourceTree = "<group>"; };
 		1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -47,23 +51,23 @@
 		1EADCC282B31235A00D7D1EB /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EADCC292B31236A00D7D1EB /* Text */,
+				1EADCC3A2B326E4900D7D1EB /* Log In Views */,
+				1EADCC392B326E1B00D7D1EB /* Welcome Views */,
+				1EADCC292B31236A00D7D1EB /* Custom Components */,
 				1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */,
-				1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */,
-				1ED4BBB22B3109D4009CD2C0 /* WelcomeScreen.swift */,
-				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
-				1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */,
-				1EADCC262B31225600D7D1EB /* LogInView.swift */,
+				1EADCC352B324A3400D7D1EB /* SignUpView.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
 		};
-		1EADCC292B31236A00D7D1EB /* Text */ = {
+		1EADCC292B31236A00D7D1EB /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				1EADCC372B32689700D7D1EB /* EmailTextField.swift */,
 				1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */,
+				1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */,
 			);
-			path = Text;
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 		1EADCC322B322AC700D7D1EB /* Extensions */ = {
@@ -72,6 +76,24 @@
 				1EADCC332B322AD800D7D1EB /* CustomTint.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EADCC392B326E1B00D7D1EB /* Welcome Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */,
+				1ED4BBB22B3109D4009CD2C0 /* WelcomeScreen.swift */,
+				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
+			);
+			path = "Welcome Views";
+			sourceTree = "<group>";
+		};
+		1EADCC3A2B326E4900D7D1EB /* Log In Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EADCC262B31225600D7D1EB /* LogInView.swift */,
+			);
+			path = "Log In Views";
 			sourceTree = "<group>";
 		};
 		1ED4BB982B30FF33009CD2C0 = {
@@ -180,12 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */,
-				1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */,
+				1EADCC2F2B32104000D7D1EB /* CustomLabel.swift in Sources */,
 				1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */,
 				1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */,
 				1ED4BBB32B3109D4009CD2C0 /* WelcomeScreen.swift in Sources */,
+				1EADCC382B32689700D7D1EB /* EmailTextField.swift in Sources */,
 				1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */,
 				1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */,
+				1EADCC362B324A3400D7D1EB /* SignUpView.swift in Sources */,
 				1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
