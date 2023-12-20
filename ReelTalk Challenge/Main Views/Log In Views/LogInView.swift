@@ -35,7 +35,7 @@ struct LogInView: View {
                         WelcomeView()
                             .toolbarRole(.editor)
                     } label: {
-                        CustomLabel(text: "Send Magic Link")
+                        ContinueButton()
                             .clipShape(RoundedRectangle(cornerRadius: 15.0))
                             .padding()
                     }

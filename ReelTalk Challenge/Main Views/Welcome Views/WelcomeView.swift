@@ -34,7 +34,7 @@ struct WelcomeView: View {
                                 SignUpView()
                                     .toolbarRole(.editor)
                             } label: {
-                                CustomLabel(text: "Continue")
+                                ContinueButton()
                                     .clipShape(RoundedRectangle(cornerRadius: 15.0))
                                     .padding(.bottom)
                             }
