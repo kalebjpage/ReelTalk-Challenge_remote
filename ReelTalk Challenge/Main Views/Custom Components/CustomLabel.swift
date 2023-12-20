@@ -7,7 +7,7 @@ struct ContinueButton: View {
     var body: some View {
             Text("Continue")
             .frame(maxWidth: .infinity)
-            .frame(height: 60)
+            .frame(height: 50)
             .font(.custom("Avenir Next", size: 17))
             .foregroundColor(.black)
             .background(Color.customTint)
@@ -51,6 +51,3 @@ struct ContinueButton: View {
 //    }
 //}
 
-#Preview {
-    ContinueButton()
-}

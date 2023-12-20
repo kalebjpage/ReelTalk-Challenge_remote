@@ -31,7 +31,7 @@ struct WelcomeView: View {
                     VStack {
                         if self.currentTab == 2 {
                             NavigationLink {
-                                SignUpView()
+                                GenrePickerView()
                                     .toolbarRole(.editor)
                             } label: {
                                 ContinueButton()
