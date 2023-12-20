@@ -32,7 +32,7 @@ struct LogInView: View {
                 VStack {
                     Spacer()
                     NavigationLink {
-                        Text("Email Verification View")
+                        WelcomeView()
                             .toolbarRole(.editor)
                     } label: {
                         CustomLabel(text: "Send Magic Link")

@@ -3,7 +3,6 @@ import SwiftUI
 struct WelcomeView: View {
     @State private var continuePressed = false
     @State private var currentTab = 0
-    private let colors: [Color] = [.red, .green, .blue]
     private let welcomeScreenData = [
         ("welcome1", "Welcome to Reel Talk, a community designed for true film and TV Show Fans"),
         ("welcome2", "Discover and discuss your favorite films, movies, and shows"),
