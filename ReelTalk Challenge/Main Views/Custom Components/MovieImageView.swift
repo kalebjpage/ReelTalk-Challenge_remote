@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct MovieImageView: View {
+    let url: URL
+                                
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        AsyncImage(url: url) { movieImage in
+            movieImage
+                .resizable()
+                .frame(maxHeight: 200)
+        } placeholder: {
+            ProgressView()
+        }
+
     }
 }
 
 #Preview {
-    MovieImageView()
+    MovieImageView(url: URL(string: "https://image.tmdb.org/t/p/w500//ocA0ECiFoB4d1HITyEDQlLk7x84.jpg")!)
 }

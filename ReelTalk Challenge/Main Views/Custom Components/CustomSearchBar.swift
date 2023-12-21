@@ -1,18 +1,35 @@
-//
-//  CustomSearchBar.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/21/23.
-//
-
 import SwiftUI
 
 struct CustomSearchBar: View {
+    @State var searchBarText: String = ""
+    @EnvironmentObject var viewModel: ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .background(Color.white)
+                .foregroundColor(.gray)
+            TextField(text: $searchBarText, prompt: Text("Search to add more")) {
+                Text("Hello World")
+            }
+            .tint(.black)
+            .padding(.horizontal)
+            .onChange(of: searchBarText) {
+                viewModel.fetch(search: searchBarText)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .font(.custom("Avenir Next", size: 17))
+        .padding()
+        .background(Color.white)
     }
 }
 
 #Preview {
-    CustomSearchBar()
+    ZStack {
+        Color("background")
+            .ignoresSafeArea()
+        CustomSearchBar()
+            .clipShape(Capsule())
+    }
 }

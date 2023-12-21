@@ -1,18 +1,19 @@
-//
-//  TabIndicator.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/21/23.
-//
-
 import SwiftUI
 
 struct TabIndicator: View {
+    @Binding var currentPage: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Rectangle()
+                .frame(height: 4)
+                .foregroundColor(currentPage == 1 ? Color.customTint : .gray)
+            Rectangle()
+                .frame(height: 4)
+                .foregroundColor(currentPage == 2 ? Color.customTint : .gray)
+            Rectangle()
+                .frame(height: 4)
+                .foregroundColor(currentPage == 3 ? Color.customTint : .gray)
+        }
     }
-}
-
-#Preview {
-    TabIndicator()
 }
