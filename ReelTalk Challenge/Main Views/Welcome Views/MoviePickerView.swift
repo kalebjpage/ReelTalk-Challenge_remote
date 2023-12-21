@@ -38,6 +38,7 @@ struct MoviePickerView: View {
                             }
                             Subtitle(text: "\(movie.title) (\(movie.formatDate()))", color: .white)
                                 .multilineTextAlignment(.center)
+                                .frame(maxHeight: 50)
                         }
                     }
                 }

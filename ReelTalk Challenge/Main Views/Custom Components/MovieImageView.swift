@@ -17,7 +17,11 @@ struct MovieImageView: View {
                 .resizable()
                 .frame(maxHeight: 200)
         } placeholder: {
-            ProgressView()
+            ZStack {
+                Color.gray.opacity(0.5)
+                ProgressView()
+            }
+            .frame(height: 200)
         }
 
     }
