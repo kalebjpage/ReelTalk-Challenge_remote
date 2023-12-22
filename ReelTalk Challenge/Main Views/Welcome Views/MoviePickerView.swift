@@ -1,10 +1,16 @@
 import SwiftUI
 
+enum PickerType {
+    case movie
+    case series
+}
+
 struct MoviePickerView: View {
     @State var moviesPicked: [Movie] = []
     @StateObject var viewModel = ViewModel()
     @EnvironmentObject var counter: Counter
     @EnvironmentObject var buttonController: ContinueButtonController
+    var pickerType: PickerType
     
     let adaptiveColumns: [GridItem] = [
         GridItem(.adaptive(minimum: 200)),
@@ -13,12 +19,12 @@ struct MoviePickerView: View {
     
     var body: some View {
         VStack {
-            Text("Select your top 5 movies")
+            Text("Select your top 5 \(pickerType == .movie ? "movies": "series")")
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.white)
                 .padding(.bottom)
-            Subtitle(text: "\(counter.moviesSelected.count)/5 selected", color: .white)
+            Subtitle(text: "\(pickerType == .movie ? counter.moviesSelected.count : counter.seriesSelected.count)/5 selected", color: .white)
             
             PickedMoviesView()
                 .environmentObject(counter)

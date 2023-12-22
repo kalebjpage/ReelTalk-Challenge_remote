@@ -40,11 +40,15 @@ struct GenrePickerView: View {
                             .frame(height: 300)
                             .environmentObject(counter)
                             .environmentObject(continueButtonController)
-//                        Spacer()
                     }
-//                    .padding()
                 } else if currentPage == 2 {
-                    MoviePickerView()
+                    MoviePickerView(pickerType: .movie)
+                        .transition(.backslide)
+                        .environmentObject(counter)
+                        .environmentObject(continueButtonController)
+                } else if currentPage == 3 {
+                    MoviePickerView(pickerType: .series)
+                        .transition(.backslide)
                         .environmentObject(counter)
                         .environmentObject(continueButtonController)
                 }
@@ -61,6 +65,15 @@ struct GenrePickerView: View {
                         .padding(.horizontal, 35.0)
                 })
                 .disabled(counter.genresSelected < 3)
+                Button(action: {
+                    if self.currentPage < 3 {
+                        withAnimation {
+                            self.currentPage += 1
+                        }
+                    }
+                }, label: {
+                    Subtitle(text: "Skip", color: Color.customTint)
+                })
                 Spacer()
             }
         }
