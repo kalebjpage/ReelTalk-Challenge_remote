@@ -22,6 +22,9 @@
 		1EB90E6B2B34F03A00CDBEF8 /* GenreBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E6A2B34F03A00CDBEF8 /* GenreBubble.swift */; };
 		1EB90E6D2B34F08D00CDBEF8 /* MovieImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E6C2B34F08D00CDBEF8 /* MovieImageView.swift */; };
 		1EB90E6F2B34F69000CDBEF8 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E6E2B34F69000CDBEF8 /* CustomSearchBar.swift */; };
+		1EB90E712B350A8000CDBEF8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E702B350A8000CDBEF8 /* ViewModel.swift */; };
+		1EB90E742B352F2200CDBEF8 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E732B352F2200CDBEF8 /* UIApplication.swift */; };
+		1EB90E762B35319400CDBEF8 /* PickedMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E752B35319400CDBEF8 /* PickedMoviesView.swift */; };
 		1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */; };
 		1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */; };
 		1ED4BBA92B30FF36009CD2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BBA82B30FF36009CD2C0 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		1EB90E6A2B34F03A00CDBEF8 /* GenreBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreBubble.swift; sourceTree = "<group>"; };
 		1EB90E6C2B34F08D00CDBEF8 /* MovieImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageView.swift; sourceTree = "<group>"; };
 		1EB90E6E2B34F69000CDBEF8 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		1EB90E702B350A8000CDBEF8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1EB90E732B352F2200CDBEF8 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		1EB90E752B35319400CDBEF8 /* PickedMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedMoviesView.swift; sourceTree = "<group>"; };
 		1ED4BBA12B30FF33009CD2C0 /* ReelTalk Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReelTalk Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelTalk_ChallengeApp.swift; sourceTree = "<group>"; };
 		1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1EADCC332B322AD800D7D1EB /* CustomTint.swift */,
+				1EB90E732B352F2200CDBEF8 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
 				1EADCC3B2B32AFEF00D7D1EB /* GenrePickerView.swift */,
 				1EB90E662B34EFCF00CDBEF8 /* MoviePickerView.swift */,
+				1EB90E752B35319400CDBEF8 /* PickedMoviesView.swift */,
 			);
 			path = "Welcome Views";
 			sourceTree = "<group>";
@@ -125,6 +133,14 @@
 				1EB90E622B34EF6000CDBEF8 /* Movie.swift */,
 			);
 			path = "ViewModel Data";
+			sourceTree = "<group>";
+		};
+		1EB90E722B350AA100CDBEF8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EB90E702B350A8000CDBEF8 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1ED4BB982B30FF33009CD2C0 = {
@@ -146,6 +162,7 @@
 		1ED4BBA32B30FF33009CD2C0 /* ReelTalk Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				1EB90E722B350AA100CDBEF8 /* ViewModel */,
 				1EB90E612B34EF4000CDBEF8 /* ViewModel Data */,
 				1EADCC322B322AC700D7D1EB /* Extensions */,
 				1EADCC282B31235A00D7D1EB /* Main Views */,
@@ -241,9 +258,12 @@
 				1EB90E632B34EF6000CDBEF8 /* Movie.swift in Sources */,
 				1EADCC2F2B32104000D7D1EB /* CustomLabel.swift in Sources */,
 				1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */,
+				1EB90E762B35319400CDBEF8 /* PickedMoviesView.swift in Sources */,
+				1EB90E742B352F2200CDBEF8 /* UIApplication.swift in Sources */,
 				1ED4BBA72B30FF33009CD2C0 /* SplashScreenView.swift in Sources */,
 				1EB90E672B34EFCF00CDBEF8 /* MoviePickerView.swift in Sources */,
 				1EB90E6B2B34F03A00CDBEF8 /* GenreBubble.swift in Sources */,
+				1EB90E712B350A8000CDBEF8 /* ViewModel.swift in Sources */,
 				1ED4BBB32B3109D4009CD2C0 /* WelcomeScreen.swift in Sources */,
 				1EADCC382B32689700D7D1EB /* EmailTextField.swift in Sources */,
 				1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */,
@@ -392,6 +412,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,6 +442,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

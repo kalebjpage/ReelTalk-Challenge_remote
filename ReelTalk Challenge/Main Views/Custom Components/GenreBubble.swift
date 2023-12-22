@@ -9,17 +9,17 @@ import SwiftUI
 
 struct GenreBubble: View {
     @State var isSelected: Bool = false
-    @EnvironmentObject var amountSelected: GenreCounter
+    @EnvironmentObject var counter: Counter
     let genre: String
     
     var body: some View {
         Button(action: {
             if self.isSelected {
                 self.isSelected = false
-                self.amountSelected.amountSelected -= 1
-            } else if amountSelected.amountSelected < 3 {
+                self.counter.genresSelected -= 1
+            } else if counter.genresSelected < 3 {
                 self.isSelected = true
-                self.amountSelected.amountSelected += 1
+                self.counter.genresSelected += 1
             }
         }, label: {
             Subtitle(text: genre, color: self.isSelected ? .black : .white)

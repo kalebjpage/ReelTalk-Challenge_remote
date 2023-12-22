@@ -1,8 +1,9 @@
 import SwiftUI
 
 struct MoviePickerView: View {
+    @State var moviesPicked: [Movie] = []
     @StateObject var viewModel = ViewModel()
-    @Binding var movieCounter: Int
+    @EnvironmentObject var counter: Counter
     
     let adaptiveColumns: [GridItem] = [
         GridItem(.adaptive(minimum: 200)),
@@ -16,12 +17,10 @@ struct MoviePickerView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.white)
                 .padding(.bottom)
-            Subtitle(text: "\(movieCounter)/5 selected", color: .white)
-            HStack {
-                ForEach(0...4, id: \.self) { _ in
-                    Image("movie frame")
-                }
-            }
+            Subtitle(text: "\(counter.moviesSelected.count)/5 selected", color: .white)
+            
+            PickedMoviesView()
+                .environmentObject(counter)
             
             CustomSearchBar()
                 .environmentObject(viewModel)
@@ -33,7 +32,7 @@ struct MoviePickerView: View {
                     ForEach(viewModel.movies, id: \.self) { movie in
                         VStack(alignment: .center) {
                             if let url = URL(string: "https://image.tmdb.org/t/p/w500/\(movie.poster_path)") {
-                                MovieImageView(url: url)
+                                MovieImageView(url: url, movie: movie, smallImage: false)
                                     .padding(.horizontal)
                             }
                             Subtitle(text: "\(movie.title) (\(movie.formatDate()))", color: .white)

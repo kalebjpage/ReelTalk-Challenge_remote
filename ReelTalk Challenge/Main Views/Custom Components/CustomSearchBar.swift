@@ -9,8 +9,8 @@ struct CustomSearchBar: View {
             Image(systemName: "magnifyingglass")
                 .background(Color.white)
                 .foregroundColor(.gray)
-            TextField(text: $searchBarText, prompt: Text("Search to add more")) {
-                Text("Hello World")
+            TextField("Search to add more", text: $searchBarText) {
+                    UIApplication.shared.endEditing()
             }
             .tint(.black)
             .padding(.horizontal)
