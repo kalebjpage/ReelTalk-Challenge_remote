@@ -16,7 +16,7 @@ struct MovieImageView: View {
     var body: some View {
             ZStack {
                     Button(action: {
-                        if pickerType == .movie {
+                        if pickerType == .movie && self.smallImage != true {
                             self.selectMovie()
                         } else {
                             self.selectSeries()
@@ -28,7 +28,17 @@ struct MovieImageView: View {
                                     movieImage
                                         .resizable()
                                         .frame(maxHeight: 200)
-                                
+                                        .onAppear {
+                                            if self.pickerType == .movie {
+                                                if self.counter.moviesSelected.firstIndex(of: self.movie) != nil {
+                                                    self.isSelected = true
+                                                }
+                                            } else {
+                                                if self.counter.seriesSelected.firstIndex(of: self.movie) != nil {
+                                                    self.isSelected = true
+                                                }
+                                            }
+                                        }
                             } else {
                                         movieImage
                                             .frame(width: 48, height: 72)
@@ -39,7 +49,6 @@ struct MovieImageView: View {
                                                     self.opacity = 1.0
                                                 }
                                             }
-                                            .disabled(true)
                             }
                             
                         } placeholder: {
@@ -58,6 +67,7 @@ struct MovieImageView: View {
                             }
                         }
                     })
+                    .disabled(self.smallImage)
                     if self.isSelected {
                         GeometryReader { g in
                             Image(systemName: "checkmark.circle.fill")

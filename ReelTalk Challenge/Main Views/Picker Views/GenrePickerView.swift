@@ -79,15 +79,23 @@ struct GenrePickerView: View {
                 })
                 .disabled(counter.genresSelected < 3)
                 .padding(.vertical)
-                Button(action: {
-                    if self.currentPage < 3 {
-                        withAnimation {
-                            self.currentPage += 1
-                        }
+                if self.currentPage == 3 {
+                    NavigationLink {
+                        KeepItReelView()
+                    } label: {
+                        CustomText(text: "Skip", color: Color.customTint)
                     }
-                }, label: {
-                    CustomText(text: "Skip", color: Color.customTint)
-                })
+                } else {
+                    Button(action: {
+                        if self.currentPage < 3 {
+                            withAnimation {
+                                self.currentPage += 1
+                            }
+                        }
+                    }, label: {
+                        CustomText(text: "Skip", color: Color.customTint)
+                    })
+                }
                 Spacer()
             }
         }
