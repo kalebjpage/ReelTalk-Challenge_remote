@@ -2,13 +2,13 @@ import SwiftUI
 
 struct MovieImageView: View {
     @EnvironmentObject var counter: Counter
+    @EnvironmentObject var buttonController: ContinueButtonController
     @State var isSelected: Bool = false
     @State var opacity: CGFloat = 1.0
     @State var size: CGFloat = 1.0
     let url: URL
     let movie: Movie
     let smallImage: Bool
-    
                                 
     var body: some View {
             ZStack {
@@ -22,6 +22,12 @@ struct MovieImageView: View {
                         } else if self.counter.moviesSelected.count < 5 {
                             counter.moviesSelected.append(self.movie)
                                 self.isSelected = true
+                        }
+                        
+                        if counter.moviesSelected.count == 5 {
+                            self.buttonController.isDisabled = false
+                        } else {
+                            self.buttonController.isDisabled = true
                         }
                     }, label: {
                         

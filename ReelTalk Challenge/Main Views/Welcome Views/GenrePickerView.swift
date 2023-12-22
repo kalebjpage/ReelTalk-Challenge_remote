@@ -3,10 +3,16 @@ import SwiftUI
 @MainActor class Counter: ObservableObject {
     @Published var genresSelected = 0
     @Published var moviesSelected: [Movie] = []
+    @Published var seriesSelected: [Movie] = []
+}
+
+@MainActor class ContinueButtonController: ObservableObject {
+    @Published var isDisabled: Bool = false
 }
 
 struct GenrePickerView: View {
     @StateObject var counter = Counter()
+    @StateObject var continueButtonController = ContinueButtonController()
     @State var currentPage = 1
     
     var body: some View {
@@ -14,7 +20,6 @@ struct GenrePickerView: View {
             Color("background")
                 .ignoresSafeArea()
             VStack {
-                
                 TabIndicator(currentPage: $currentPage)
                     .padding(.horizontal, 40.0)
                     .padding()
@@ -34,12 +39,14 @@ struct GenrePickerView: View {
                         GenreList()
                             .frame(height: 300)
                             .environmentObject(counter)
+                            .environmentObject(continueButtonController)
 //                        Spacer()
                     }
 //                    .padding()
                 } else if currentPage == 2 {
                     MoviePickerView()
                         .environmentObject(counter)
+                        .environmentObject(continueButtonController)
                 }
                 Spacer()
                 Button(action: {
@@ -48,6 +55,7 @@ struct GenrePickerView: View {
                     }
                 }, label: {
                     ContinueButton()
+                        .environmentObject(self.continueButtonController)
                         .background(Color.black)
                         .clipShape(RoundedRectangle(cornerRadius: 15.0))
                         .padding(.horizontal, 35.0)
@@ -55,6 +63,9 @@ struct GenrePickerView: View {
                 .disabled(counter.genresSelected < 3)
                 Spacer()
             }
+        }
+        .onAppear {
+            self.continueButtonController.isDisabled = true
         }
     }
 }

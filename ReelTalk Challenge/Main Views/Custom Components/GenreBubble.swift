@@ -10,6 +10,7 @@ import SwiftUI
 struct GenreBubble: View {
     @State var isSelected: Bool = false
     @EnvironmentObject var counter: Counter
+    @EnvironmentObject var buttonController: ContinueButtonController
     let genre: String
     
     var body: some View {
@@ -20,6 +21,12 @@ struct GenreBubble: View {
             } else if counter.genresSelected < 3 {
                 self.isSelected = true
                 self.counter.genresSelected += 1
+                
+            }
+            if counter.genresSelected == 3 {
+                self.buttonController.isDisabled = false
+            } else {
+                self.buttonController.isDisabled = true
             }
         }, label: {
             Subtitle(text: genre, color: self.isSelected ? .black : .white)

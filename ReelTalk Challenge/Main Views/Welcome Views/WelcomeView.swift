@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @StateObject var buttonController: ContinueButtonController = ContinueButtonController()
     @State private var continuePressed = false
     @State private var currentTab = 0
     private let welcomeScreenData = [
@@ -25,7 +26,7 @@ struct WelcomeView: View {
                     .frame(height: 500)
                     .tabViewStyle(.page)
                     .onAppear {
-                        setupAppearance()
+                        self.setupAppearance()
                     }
                     Spacer()
                     VStack {
@@ -35,6 +36,7 @@ struct WelcomeView: View {
                                     .toolbarRole(.editor)
                             } label: {
                                 ContinueButton()
+                                    .environmentObject(buttonController)
                                     .clipShape(RoundedRectangle(cornerRadius: 15.0))
                                     .padding(.bottom)
                             }
@@ -58,12 +60,12 @@ struct WelcomeView: View {
         }
         .tint(.white)
     }
-}
     
     func setupAppearance() {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(red: 0.992, green: 0.656, blue: 0.142, alpha: 1)
     }
-
+}
+    
 #Preview {
     WelcomeView()
 }

@@ -4,6 +4,7 @@ struct MoviePickerView: View {
     @State var moviesPicked: [Movie] = []
     @StateObject var viewModel = ViewModel()
     @EnvironmentObject var counter: Counter
+    @EnvironmentObject var buttonController: ContinueButtonController
     
     let adaptiveColumns: [GridItem] = [
         GridItem(.adaptive(minimum: 200)),
@@ -21,6 +22,7 @@ struct MoviePickerView: View {
             
             PickedMoviesView()
                 .environmentObject(counter)
+                .environmentObject(buttonController)
             
             CustomSearchBar()
                 .environmentObject(viewModel)
@@ -45,6 +47,7 @@ struct MoviePickerView: View {
         }
         .onAppear {
             //Do something with the previously selected genres there
+            self.buttonController.isDisabled = true
             viewModel.fetch(search: nil)
         }
     }
