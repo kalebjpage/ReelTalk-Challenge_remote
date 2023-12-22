@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// A custom email text field for the log in views.
+
 struct EmailTextField: View {
     @State private var emailTextField = ""
     

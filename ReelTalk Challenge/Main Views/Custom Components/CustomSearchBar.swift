@@ -1,8 +1,11 @@
 import SwiftUI
 
+/// A custom search bar according to the design in Figma. When the text is changed, the API network call is made and the desired movies or series are retrieved.
+
 struct CustomSearchBar: View {
     @State var searchBarText: String = ""
     @EnvironmentObject var viewModel: ViewModel
+    var pickerType: PickerType
     
     var body: some View {
         HStack {
@@ -15,7 +18,11 @@ struct CustomSearchBar: View {
             .tint(.black)
             .padding(.horizontal)
             .onChange(of: searchBarText) {
-                viewModel.fetch(search: searchBarText)
+                if self.pickerType == .movie {
+                    viewModel.fetchMovies(search: searchBarText)
+                } else {
+                    viewModel.fetchSeries(search: searchBarText)
+                }
             }
         }
         .frame(maxWidth: .infinity)
@@ -29,7 +36,7 @@ struct CustomSearchBar: View {
     ZStack {
         Color("background")
             .ignoresSafeArea()
-        CustomSearchBar()
+        CustomSearchBar(pickerType: .movie)
             .clipShape(Capsule())
     }
 }

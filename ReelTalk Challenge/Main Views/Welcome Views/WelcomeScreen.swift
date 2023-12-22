@@ -9,7 +9,7 @@ struct WelcomeScreen: View {
             Spacer()
             Image(image)
                 .padding()
-            Subtitle(text: text, color: .white)
+            CustomText(text: text, color: .white)
                 .font(.custom("Avenir Next", size: 17))
                 .multilineTextAlignment(.center)
                 .padding()

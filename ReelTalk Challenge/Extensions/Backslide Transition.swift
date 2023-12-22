@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// A custom backslide transition for the picker views.
+
 extension AnyTransition {
     static var backslide: AnyTransition {
         AnyTransition.asymmetric(

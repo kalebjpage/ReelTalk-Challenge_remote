@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// The initial splash screen view when a user enters the application, showing the logo.
+
 struct SplashScreenView: View {
     @State private var isActive = false
     @State private var size = 0.8

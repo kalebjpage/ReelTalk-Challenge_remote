@@ -1,14 +1,14 @@
 import SwiftUI
 
+/// This counter object keeps track of the amount of movies, series, and genres that a user has picked. It is shared between multiple views.
+
 @MainActor class Counter: ObservableObject {
     @Published var genresSelected = 0
     @Published var moviesSelected: [Movie] = []
     @Published var seriesSelected: [Movie] = []
 }
 
-@MainActor class ContinueButtonController: ObservableObject {
-    @Published var isDisabled: Bool = false
-}
+/// The main view in charge of selection. It nests the genre picker, movie picker, and series picker.
 
 struct GenrePickerView: View {
     @StateObject var counter = Counter()
@@ -32,7 +32,7 @@ struct GenrePickerView: View {
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.white)
                             .padding(.bottom)
-                        Subtitle(text: "\(counter.genresSelected)/3 selected", color: .white)
+                        CustomText(text: "\(counter.genresSelected)/3 selected", color: .white)
                     }
                     Spacer()
                     HStack {
@@ -58,13 +58,27 @@ struct GenrePickerView: View {
                         self.currentPage += 1
                     }
                 }, label: {
-                    ContinueButton()
-                        .environmentObject(self.continueButtonController)
-                        .background(Color.black)
-                        .clipShape(RoundedRectangle(cornerRadius: 15.0))
-                        .padding(.horizontal, 35.0)
+                    if self.currentPage == 3 {
+                        NavigationLink {
+                            KeepItReelView()
+                        } label: {
+                            ContinueButton(text: "Continue")
+                                .environmentObject(self.continueButtonController)
+                                .background(Color.black)
+                                .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                                .padding(.horizontal, 35.0)
+                        }
+                        .disabled(self.continueButtonController.isDisabled)
+                    } else {
+                        ContinueButton(text: "Continue")
+                            .environmentObject(self.continueButtonController)
+                            .background(Color.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                            .padding(.horizontal, 35.0)
+                    }
                 })
                 .disabled(counter.genresSelected < 3)
+                .padding(.vertical)
                 Button(action: {
                     if self.currentPage < 3 {
                         withAnimation {
@@ -72,7 +86,7 @@ struct GenrePickerView: View {
                         }
                     }
                 }, label: {
-                    Subtitle(text: "Skip", color: Color.customTint)
+                    CustomText(text: "Skip", color: Color.customTint)
                 })
                 Spacer()
             }

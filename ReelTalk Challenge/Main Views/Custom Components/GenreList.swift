@@ -1,11 +1,6 @@
-//
-//  GenreList.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/21/23.
-//
-
 import SwiftUI
+
+///A list of genres formatted exactly as seen in the design sketch in Figma.
 
 struct GenreList: View {
     var body: some View {

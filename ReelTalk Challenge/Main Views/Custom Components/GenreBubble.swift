@@ -1,11 +1,6 @@
-//
-//  GenreBubble.swift
-//  ReelTalk Challenge
-//
-//  Created by Kaleb Page on 12/21/23.
-//
-
 import SwiftUI
+
+/// A bubble which fills in on click and updates the counter variable to let the view know a genre has been selected. When 3 have been selected, the buttonController object enables the continue button.
 
 struct GenreBubble: View {
     @State var isSelected: Bool = false
@@ -29,7 +24,7 @@ struct GenreBubble: View {
                 self.buttonController.isDisabled = true
             }
         }, label: {
-            Subtitle(text: genre, color: self.isSelected ? .black : .white)
+            CustomText(text: genre, color: self.isSelected ? .black : .white)
                 .bold()
                 .padding(.horizontal, 25.0)
                 .padding(.vertical, 5.0)

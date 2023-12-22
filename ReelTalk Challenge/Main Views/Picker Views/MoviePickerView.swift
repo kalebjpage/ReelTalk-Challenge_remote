@@ -1,9 +1,13 @@
 import SwiftUI
 
+/// An enum used to differentiate between the two pickers.
+
 enum PickerType {
     case movie
     case series
 }
+
+/// Depending on whether it is a series or a movie, the MoviePickerView takes charge of displaying the movies and their respective titles.
 
 struct MoviePickerView: View {
     @State var moviesPicked: [Movie] = []
@@ -24,13 +28,13 @@ struct MoviePickerView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.white)
                 .padding(.bottom)
-            Subtitle(text: "\(pickerType == .movie ? counter.moviesSelected.count : counter.seriesSelected.count)/5 selected", color: .white)
+            CustomText(text: "\(pickerType == .movie ? counter.moviesSelected.count : counter.seriesSelected.count)/5 selected", color: .white)
             
-            PickedMoviesView()
+            PickedMoviesView(pickerType: pickerType)
                 .environmentObject(counter)
                 .environmentObject(buttonController)
             
-            CustomSearchBar()
+            CustomSearchBar(pickerType: self.pickerType)
                 .environmentObject(viewModel)
                 .clipShape(Capsule())
                 .padding()
@@ -40,10 +44,10 @@ struct MoviePickerView: View {
                     ForEach(viewModel.movies, id: \.self) { movie in
                         VStack(alignment: .center) {
                             if let url = URL(string: "https://image.tmdb.org/t/p/w500/\(movie.poster_path)") {
-                                MovieImageView(url: url, movie: movie, smallImage: false)
+                                MovieImageView(url: url, movie: movie, smallImage: false, pickerType: pickerType)
                                     .padding(.horizontal)
                             }
-                            Subtitle(text: "\(movie.title) (\(movie.formatDate()))", color: .white)
+                            CustomText(text: "\(movie.title) (\(movie.formatDate()))", color: .white)
                                 .multilineTextAlignment(.center)
                                 .frame(maxHeight: 50)
                         }
@@ -52,9 +56,12 @@ struct MoviePickerView: View {
             }
         }
         .onAppear {
-            //Do something with the previously selected genres there
             self.buttonController.isDisabled = true
-            viewModel.fetch(search: nil)
+            if self.pickerType == .movie {
+                self.viewModel.fetchMovies(search: nil)
+            } else {
+                self.viewModel.fetchSeries(search: nil)
+            }
         }
     }
 }

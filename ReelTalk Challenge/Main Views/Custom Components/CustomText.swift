@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct Subtitle: View {
+/// A custom text view used commonly throughout the app. It uses the correct font, "Avenir Next."
+
+struct CustomText: View {
     
     var text: String
     var color: Color
@@ -14,5 +16,5 @@ struct Subtitle: View {
 }
 
 #Preview {
-    Subtitle(text: "Hello World!", color: .black)
+    CustomText(text: "Hello World!", color: .black)
 }

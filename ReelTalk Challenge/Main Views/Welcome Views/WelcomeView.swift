@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// The second view in the application. The WelcomeView has 3 separate nested WelcomeScreens. Once a user swipes to the right, the screen changes according the the currentTab variable.
+
 struct WelcomeView: View {
     @StateObject var buttonController: ContinueButtonController = ContinueButtonController()
     @State private var continuePressed = false
@@ -35,20 +37,20 @@ struct WelcomeView: View {
                                 GenrePickerView()
                                     .toolbarRole(.editor)
                             } label: {
-                                ContinueButton()
+                                ContinueButton(text: "Continue")
                                     .environmentObject(buttonController)
                                     .clipShape(RoundedRectangle(cornerRadius: 15.0))
                                     .padding(.bottom)
                             }
                         }
                         HStack(alignment: .top) {
-                            Subtitle(text: "Already have an account?", color: .white)
+                            CustomText(text: "Already have an account?", color: .white)
                                 .bold()
                             NavigationLink {
                                 LogInView()
                                     .toolbarRole(.editor)
                             } label: {
-                                Subtitle(text: "Log in", color: .customTint)
+                                CustomText(text: "Log in", color: .customTint)
                             }
                         }
                         .padding(.bottom)

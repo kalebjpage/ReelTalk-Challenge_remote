@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// Originally made this LogInView, but after asking realized it was unnecessary. I'll keep it here though, just in case.
+
 struct LogInView: View {
     @State private var emailTextField = ""
     
@@ -16,16 +18,16 @@ struct LogInView: View {
                         Spacer()
                             .frame(height: 45)
                         VStack {
-                            Subtitle(text: "Welcome Back!", color: .white, textSize: 18)
+                            CustomText(text: "Welcome Back!", color: .white, textSize: 18)
                                 .bold()
                                 .padding(1)
-                            Subtitle(text: "Please enter your email.", color: Color.gray, textSize: 12)
+                            CustomText(text: "Please enter your email.", color: Color.gray, textSize: 12)
                         }
                         .padding(.init(top: 0, leading: 0, bottom: -20, trailing: 0))
                     }
                 }
                 .mask(LinearGradient(gradient: Gradient(colors: [.black.opacity(1.0), .black.opacity(1.0), .black.opacity(0.2), .black.opacity(0.1)]), startPoint: .center, endPoint: .bottom))
-//                Spacer()
+
                 EmailTextField()
                     .padding(.bottom)
                 
@@ -35,19 +37,19 @@ struct LogInView: View {
                         WelcomeView()
                             .toolbarRole(.editor)
                     } label: {
-                        ContinueButton()
+                        ContinueButton(text: "Continue")
                             .clipShape(RoundedRectangle(cornerRadius: 15.0))
                             .padding()
                     }
                     Spacer()
                     HStack(alignment: .top) {
-                        Subtitle(text: "Don't have an account?", color: .white)
+                        CustomText(text: "Don't have an account?", color: .white)
                             .bold()
                         NavigationLink {
-                            SignUpView()
+                            Text("Sign Up")
                                 .toolbarRole(.editor)
                         } label: {
-                            Subtitle(text: "Sign Up", color: .customTint)
+                            CustomText(text: "Sign Up", color: .customTint)
                         }
                     }
                     .padding(.bottom)
@@ -61,7 +63,7 @@ struct LogInView: View {
                         ToolbarItem(placement: .topBarLeading){
                             ZStack {
                                 Image("Movies")
-                                Subtitle(text: "Log In", color: .white)
+                                CustomText(text: "Log In", color: .white)
                                     .bold()
                             }
                         }

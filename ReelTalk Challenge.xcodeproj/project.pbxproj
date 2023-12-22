@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E71672C2B355516004A9EDB /* KeepItReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71672B2B355516004A9EDB /* KeepItReelView.swift */; };
 		1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC262B31225600D7D1EB /* LogInView.swift */; };
-		1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */; };
+		1EADCC2B2B3123A100D7D1EB /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2A2B3123A100D7D1EB /* CustomText.swift */; };
 		1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */; };
-		1EADCC2F2B32104000D7D1EB /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */; };
+		1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */; };
 		1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC332B322AD800D7D1EB /* CustomTint.swift */; };
-		1EADCC362B324A3400D7D1EB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC352B324A3400D7D1EB /* SignUpView.swift */; };
 		1EADCC382B32689700D7D1EB /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC372B32689700D7D1EB /* EmailTextField.swift */; };
 		1EADCC3C2B32AFEF00D7D1EB /* GenrePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADCC3B2B32AFEF00D7D1EB /* GenrePickerView.swift */; };
 		1EB90E632B34EF6000CDBEF8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB90E622B34EF6000CDBEF8 /* Movie.swift */; };
@@ -34,12 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E71672B2B355516004A9EDB /* KeepItReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepItReelView.swift; sourceTree = "<group>"; };
 		1EADCC262B31225600D7D1EB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		1EADCC2A2B3123A100D7D1EB /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		1EADCC332B322AD800D7D1EB /* CustomTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTint.swift; sourceTree = "<group>"; };
-		1EADCC352B324A3400D7D1EB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1EADCC372B32689700D7D1EB /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		1EADCC3B2B32AFEF00D7D1EB /* GenrePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrePickerView.swift; sourceTree = "<group>"; };
 		1EB90E622B34EF6000CDBEF8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -72,14 +72,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E71672D2B356536004A9EDB /* Picker Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EADCC3B2B32AFEF00D7D1EB /* GenrePickerView.swift */,
+				1EB90E662B34EFCF00CDBEF8 /* MoviePickerView.swift */,
+				1E71672B2B355516004A9EDB /* KeepItReelView.swift */,
+				1EB90E752B35319400CDBEF8 /* PickedMoviesView.swift */,
+			);
+			path = "Picker Views";
+			sourceTree = "<group>";
+		};
 		1EADCC282B31235A00D7D1EB /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EADCC3A2B326E4900D7D1EB /* Log In Views */,
 				1EADCC392B326E1B00D7D1EB /* Welcome Views */,
+				1E71672D2B356536004A9EDB /* Picker Views */,
+				1EADCC3A2B326E4900D7D1EB /* Log In Views */,
 				1EADCC292B31236A00D7D1EB /* Custom Components */,
 				1ED4BBA42B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift */,
-				1EADCC352B324A3400D7D1EB /* SignUpView.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -88,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				1EADCC372B32689700D7D1EB /* EmailTextField.swift */,
-				1EADCC2A2B3123A100D7D1EB /* Subtitle.swift */,
-				1EADCC2E2B32104000D7D1EB /* CustomLabel.swift */,
+				1EADCC2A2B3123A100D7D1EB /* CustomText.swift */,
+				1EADCC2E2B32104000D7D1EB /* ContinueButton.swift */,
 				1EB90E642B34EF8800CDBEF8 /* TabIndicator.swift */,
 				1EB90E682B34F01A00CDBEF8 /* GenreList.swift */,
 				1EB90E6A2B34F03A00CDBEF8 /* GenreBubble.swift */,
@@ -115,9 +126,6 @@
 				1ED4BBA62B30FF33009CD2C0 /* SplashScreenView.swift */,
 				1ED4BBB22B3109D4009CD2C0 /* WelcomeScreen.swift */,
 				1EADCC2C2B3171C300D7D1EB /* WelcomeView.swift */,
-				1EADCC3B2B32AFEF00D7D1EB /* GenrePickerView.swift */,
-				1EB90E662B34EFCF00CDBEF8 /* MoviePickerView.swift */,
-				1EB90E752B35319400CDBEF8 /* PickedMoviesView.swift */,
 			);
 			path = "Welcome Views";
 			sourceTree = "<group>";
@@ -256,10 +264,11 @@
 				1EB90E652B34EF8800CDBEF8 /* TabIndicator.swift in Sources */,
 				1EADCC3C2B32AFEF00D7D1EB /* GenrePickerView.swift in Sources */,
 				1EB90E6D2B34F08D00CDBEF8 /* MovieImageView.swift in Sources */,
-				1EADCC2B2B3123A100D7D1EB /* Subtitle.swift in Sources */,
+				1EADCC2B2B3123A100D7D1EB /* CustomText.swift in Sources */,
 				1EB90E692B34F01A00CDBEF8 /* GenreList.swift in Sources */,
+				1E71672C2B355516004A9EDB /* KeepItReelView.swift in Sources */,
 				1EB90E632B34EF6000CDBEF8 /* Movie.swift in Sources */,
-				1EADCC2F2B32104000D7D1EB /* CustomLabel.swift in Sources */,
+				1EADCC2F2B32104000D7D1EB /* ContinueButton.swift in Sources */,
 				1EADCC2D2B3171C300D7D1EB /* WelcomeView.swift in Sources */,
 				1EB90E762B35319400CDBEF8 /* PickedMoviesView.swift in Sources */,
 				1EB90E742B352F2200CDBEF8 /* UIApplication.swift in Sources */,
@@ -273,7 +282,6 @@
 				1EADCC272B31225600D7D1EB /* LogInView.swift in Sources */,
 				1EB90E6F2B34F69000CDBEF8 /* CustomSearchBar.swift in Sources */,
 				1EADCC342B322AD800D7D1EB /* CustomTint.swift in Sources */,
-				1EADCC362B324A3400D7D1EB /* SignUpView.swift in Sources */,
 				1ED4BBA52B30FF33009CD2C0 /* ReelTalk_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
